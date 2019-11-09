@@ -13,4 +13,28 @@ This projet aimes to leave a polite little comment at the beginning of the MD fi
 
 The beauty of making up your own rule, is that "the game" fits your situation. The problem is that it is not transferable in source form. only output form.
 
-Based on your plugin chain
+Based on your plugin chain this plugin might leave a comment/note at the beginning or in the front matter.
+
+ ```text
+ <!--
+ * This is a comment automatically generatedd based on the plugins used to process this file.
+ * Since markdown does not have proper fallback support on how to handle various cases, 
+ * this comment aims to document the requirements for rendering this MD as intended.
+ * 
+ * The Author might even add some text here in the premable, 
+ * all occurring before the {{ MDConfig }} delimiter.
+ * 
+ *
+ * {{ MDConfig }}
+ * preprocessor:
+ *   engine:
+ *    name: @unified/Remark
+ *    npm: remarkjs
+ *    link: https://npm.im/remarkjs
+ *   config:
+ *    name: @federa/remarkPreset2020
+ *    npm: [ '@federa/remarkPreset2020' ]
+ *    link: http://npm.im/@feder/remarkpreset2020
+ -->
+```
+
